@@ -1,0 +1,337 @@
+/* recipes.css */
+
+/* Recipes Page Section */
+#recipes-page {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+#recipes-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-size: 2.5em;
+}
+
+/* Search Bar */
+.search {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: 2px solid var(--secondary-color);
+    border-left: none;
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.search-bar button:hover {
+    background-color: var(--hover-color);
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.result-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.result-item mark {
+    background-color: yellow;
+}
+
+/* Recipes Container */
+.Breakfast, .Lunch, .Dinner, .Dessert, #recipeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    margin: 15px;
+    color: var(--button-color);
+    font-size: 1.5em;
+}
+
+.recipe-card p {
+    margin: 0 15px 15px 15px;
+    color: #555;
+    flex-grow: 1;
+}
+
+.recipe-card button {
+    margin: 0 15px 15px 15px;
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.recipe-card button:hover {
+    background-color: var(--hover-color);
+}
+
+.title {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+
+/* Align the "More Recipes" button */
+.more-recipes {
+    display: block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    width: 250px;
+    margin-left: 1000px;
+    text-decoration: none;
+}
+
+
+.more-recipes:hover {
+    background-color: #f8ba6ddf;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Recipe Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: var(--button-color);
+}
+
+.modal-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    color: var(--secondary-color);
+}
+
+.modal-content ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* CSS for the modal image */
+#modalRecipeImage {
+   display: none;
+}
+
+/* Styles for the Recipe Submission Form */
+#submit-recipe-section {
+    margin: 40px 400px;
+    background-color:  #575a5d5a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+#submit-recipe-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Submit button for Recipe Form */
+.submit-button {
+    padding: 10px 20px;
+    background-color: #1058c4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.submit-button:hover {
+    background-color: #09108b;
+}
+
+/* General Button Styles (Optional) */
+button {
+    cursor: pointer;
+}
+
+
+/* New Released Posts Section */
+.new-posts h2 {
+    color: var(--secondary-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust search bar for smaller screens */
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        width: 80%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .search-bar button {
+        width: 80%;
+        border-radius: 5px;
+    }
+
+    /* Adjust recipe cards */
+    .recipe-card {
+        width: 90%;
+    }
+
+    /* Modal Content */
+    .modal-content {
+        width: 90%;
+    }
+}

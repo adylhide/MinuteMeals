@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteMeals</title>
+    <!--Link to common CSS Styles-->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Link to Recipes CSS for page-specific styles -->
+    <link rel="stylesheet" href="../styles/recipes.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../assets/Images/logo.png" alt="RecipeHub Logo" height="80">
+            </div>
+            <a href="../pages/Sign.html" class="signup-button">Sign Up</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../FINALS/pages/recipes.html">Recipes</a></li>
+                <li><a href="../index.html#Blog">Blog</a></li>
+                <li><a href="recipes.html#recipeContainer">New Released</a></li>
+                <li><a href="../pages/submit-form.html">Submit Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Recipes Section -->
+        <section id="recipes-page">
+            <div class="search">
+                <h2>Our Delicious Recipes</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search items...">
+                    <button id="searchButton">Search</button>
+                </div>
+                <div class="results" id="resultsContainer">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+            <br>
+            
+            <div class="title">
+                <h4>Breakfast</h4>
+            </div>
+    
+            <!-- Breakfast Grid -->
+            <div class="Breakfast" id="Break">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/BF/egg-bhurji.jpg" alt="Egg Bhurji - Scrambled spiced eggs">
+                    <h3>Egg Bhurji</h3>
+                    <p>A classic Indian scrambled egg dish with spices and vegetables.</p>
+                    <button onclick="viewRecipe('Egg Bhurji')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/BF/egg-toast.jpg" alt="Egg Toast - Toasted bread with spiced scrambled eggs">
+                    <h3>Egg Toast</h3>
+                    <p>Toast topped with spiced scrambled eggs and a crispy crust.</p>
+                    <button onclick="viewRecipe('Egg Toast')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/BF/shrimp.jpg" alt="Shrimp Fried Rice - Fried rice with shrimp and vegetables">
+                    <h3>Shrimp Fried Rice</h3>
+                    <p>A tasty fried rice dish with shrimp, vegetables, and soy sauce.</p>
+                    <button onclick="viewRecipe('Shrimp Fried Rice')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/BF/stirfry.jpg" alt="Vegetable Stir Fry - Mixed vegetables stir-fried with soy sauce">
+                    <h3>Vegetable Stir Fry</h3>
+                    <p>Healthy stir-fried vegetables with soy sauce and spices.</p>
+                    <button onclick="viewRecipe('Vegetable Stir Fry')">View Recipe</button>
+                </div>
+                <!-- More Recipes Button -->
+                <a href="../pages/BreakF.html" class="more-recipes">More Recipes</a>
+            </div>
+            <br>
+    
+            <div class="title">
+                <h4>Lunch</h4>
+            </div>
+    
+            <!-- Lunch Grid -->
+            <div class="Lunch" id="Lunch">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/ChkFillet.jpg" alt="Crispy Chicken Fillet">
+                    <h3>Crispy Chicken Fillet</h3>
+                    <p>Crispy, golden fried chicken fillets, tender and perfectly seasoned.</p>
+                    <button onclick="viewRecipe('Crispy Chicken Fillet')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/HoneyChicken.jpg" alt="HoneyChicken">
+                    <h3>Honey Chicken</h3>
+                    <p>Juicy chicken is enveloped in a luscious glaze of golden honey. </p>
+                    <button onclick="viewRecipe('HoneyChicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Aglio.jpg" alt="Aglio">
+                    <h3>Aglio E Olio</h3>
+                    <p>A comforting pasta dish with garlic, olive oil, and herbs.</p>
+                    <button onclick="viewRecipe('Aglio e Olio')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Corn-Chip-Salad.jpg" alt="Corn-Chip-Salad">
+                    <h3>Corn-Chip-Salad</h3>
+                    <p>A crunchy, flavorful salad with corn chips, beans, and cheese. </p>
+                    <button onclick="viewRecipe('Corn-Chip Salad')">View Recipe</button>
+                </div>
+                <!-- More Recipes Button -->
+                <a href="../pages/Lunch.html" class="more-recipes">More Recipes</a>
+            </div>
+            <br>
+    
+            <div class="title">
+                <h4>Dinner</h4>
+            </div>
+    
+            <!-- Dinner Grid -->
+            <div class="Dinner" id="Dinner">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/DNR/Butternut-Squash.jpg" alt="Butternut Squash">
+                    <h3>Butternut Squash </h3>
+                    <p>This delectable squash-studded bread pudding-gratin hybrid.</p>
+                    <button onclick="viewRecipe('Butternut Squash')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/DNR/Lemon-Chicken.jpg" alt="Lemon-Chicken">
+                    <h3>Lemon Chicken</h3>
+                    <p>Our easy lemon chicken recipe shines with a sunny, lemony zing. </p>
+                    <button onclick="viewRecipe('Lemon Chicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/DNR/mushroom-soup.jpg" alt="Hungarian Mushroom Soup">
+                    <h3>Mushroom Soup</h3>
+                    <p>The savory stars of this creamy, pungent, satisfying Hungarian mushroom soup.</p>
+                    <button onclick="viewRecipe('Hungarian Mushroom Soup')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/DNR/Sesame-Garlic-Noodles.jpg" alt="Sesame Garlic Ramen Noodles">
+                    <h3>Sesame Noodles</h3>
+                    <p>Take a pack of instant ramen noodles, ditch the seasoning packet.</p>
+                    <button onclick="viewRecipe('Sesame Garlic Ramen Noodles')">View Recipe</button>
+                </div>
+                <!-- More Recipes Button -->
+                <a href="../pages/Dinner.html" class="more-recipes">More Recipes</a>
+            </div>
+            <br>
+    
+            <div class="title">
+                <h4>Desserts</h4>
+            </div>
+    
+            <!-- Desserts Grid -->
+            <div class="Dessert" id="Dessert">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/DST/creme.jpg" alt="Creme Brulee">
+                    <h3>Creme Brulee</h3>
+                    <p>Rich, creamy, vanilla custard with caramelized sugar.</p>
+                    <button onclick="viewRecipe('Creme Brulee')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/DST/Cinnamon-Oat.jpg" alt="Cinnamon-Oat">
+                    <h3>Cinnamon-Oat Bars</h3>
+                    <p>Sweet, cinnamon-infused, oat-filled, delicious bars.</p>
+                    <button onclick="viewRecipe('Cinnamon-Oat Bars')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/DST/coconut-macaroons.jpg" alt="coconut-macaroons">
+                    <h3>Coco-Maca</h3>
+                    <p>Chewy, sweet coconut cookies with crisp edges.</p>
+                    <button onclick="viewRecipe('Coconut Macaroons')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/DST/Tiramisu.jpg" alt="Tiramisu">
+                    <h3>Tiramisu</h3>
+                    <p>Coffee-soaked ladyfingers layered with creamy mascarpone.</p>
+                    <button onclick="viewRecipe('Tiramisu Cake')">View Recipe</button>
+                </div>
+                <!-- More Recipes Button -->
+                <a href="../pages/Dessert.html" class="more-recipes">More Recipes</a>
+            </div>
+        </section>
+
+        <br>
+        <br>
+
+    </main>
+    
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeRecipeModal()">&times;</span>
+            <h2 id="modalRecipeTitle">Recipe Title</h2>
+            <br>
+            <img id="modalRecipeImage" src="" alt="Recipe Image">
+            <h3>Ingredients</h3>
+            <ul id="modalIngredients">
+                <!-- Ingredients will be populated here -->
+            </ul>
+            <br>
+            <h3>Instructions</h3>
+            <p id="modalInstructions">
+                <!-- Instructions will be populated here -->
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="../assets/Images/logo.png" alt="MinuteMeals Logo" height="90">
+
+                <p class="footer-links">
+                    <a href="../index.html#home">Home</a>
+                    <a href="/pages/recipes.html">Recipes</a>
+                    <a href="../index.html">Blog</a>
+                    <a href="../pages/submit-form.html#recipeContainer">New Released</a>
+                    <a href="../pages/submit-form.html">Submit Recipes</a>
+                </p>
+  
+          <p class="footer-company-name">MinuteMeals © 2025</p>
+        </div>
+  
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>029 T.S. Cornelia St.</span> Wisconsin, California</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:minutemeals@gmail.com">minute.Meals@gmail.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>Members: </span>
+            Adhie Ahat, Cherry Lou, Saara Eliana, John Troy.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+    </footer>
+    
+    <!-- Link to Main JS for common scripts -->
+    <script src="../javascript/script.js"></script>
+    <!-- Link to Recipes JS for page-specific scripts -->
+    <script src="../javascript/recipes.js"></script>
+</body>
+</html>

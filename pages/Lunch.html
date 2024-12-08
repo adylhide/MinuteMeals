@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteMeals</title>
+    <!--Link to common CSS Styles-->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- Link to same CSS for page-specific styles -->
+    <link rel="stylesheet" href="../styles/recipes.css">
+    <!-- page-specific styles -->
+    <link rel="stylesheet" href="page.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" 
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="../assets/images/logo.png" alt="RecipeHub Logo" height="80">
+            </div>
+            <a href="../pages/Sign.html" class="signup-button">Sign Up</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html#home">Home</a></li>
+                <li><a href="../FINALS/pages/recipes.html">Recipes</a></li>
+                <li><a href="/index.html#Blog">Blog</a></li>
+                <li><a href="../pages/recipes.html#New-Released">New Released</a></li>
+                <li><a href="../pages/submit-form.html">Submit Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="recipes-page">
+            <div class="search">
+                <h2>Our Delicious Recipes</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search items...">
+                    <button id="searchButton">Search</button>
+                </div>
+                <div class="results" id="resultsContainer">
+                    <!-- Search results will appear here -->
+                </div>
+            </div>
+            
+            <br>
+
+            <div class="title">
+                <h4>Lunch</h4>
+            </div>
+
+            <!-- Lunch Grid -->
+            <div class="Lunch" id="Lunch">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/Images/LCH/ChkFillet.jpg" alt="Crispy Chicken Fillet">
+                    <h3>Crispy Chicken Fillet</h3>
+                    <p>Crispy, golden fried chicken fillets, tender and perfectly seasoned.</p>
+                    <button onclick="viewRecipe('Crispy Chicken Fillet')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/Images/LCH/HoneyChicken.jpg" alt="HoneyChicken">
+                    <h3>Honey Chicken</h3>
+                    <p>Juicy chicken is enveloped in a luscious glaze of golden honey. </p>
+                    <button onclick="viewRecipe('HoneyChicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/Images/LCH/Aglio.jpg" alt="Aglio">
+                    <h3>Aglio E Olio</h3>
+                    <p>A comforting pasta dish with garlic, olive oil, and herbs.</p>
+                    <button onclick="viewRecipe('Aglio e Olio')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/Images/LCH/Corn-Chip-Salad.jpg" alt="Corn-Chip-Salad">
+                    <h3>Corn-Chip-Salad</h3>
+                    <p>A crunchy, flavorful salad with corn chips, beans, and cheese. </p>
+                    <button onclick="viewRecipe('Corn-Chip Salad')">View Recipe</button>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Lunch Grid -->
+            <div class="Lunch" id="Lunch">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/ChkFillet.jpg" alt="Crispy Chicken Fillet">
+                    <h3>Crispy Chicken Fillet</h3>
+                    <p>Crispy, golden fried chicken fillets, tender and perfectly seasoned.</p>
+                    <button onclick="viewRecipe('Crispy Chicken Fillet')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/HoneyChicken.jpg" alt="HoneyChicken">
+                    <h3>Honey Chicken</h3>
+                    <p>Juicy chicken is enveloped in a luscious glaze of golden honey. </p>
+                    <button onclick="viewRecipe('HoneyChicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Aglio.jpg" alt="Aglio">
+                    <h3>Aglio E Olio</h3>
+                    <p>A comforting pasta dish with garlic, olive oil, and herbs.</p>
+                    <button onclick="viewRecipe('Aglio e Olio')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Corn-Chip-Salad.jpg" alt="Corn-Chip-Salad">
+                    <h3>Corn-Chip-Salad</h3>
+                    <p>A crunchy, flavorful salad with corn chips, beans, and cheese. </p>
+                    <button onclick="viewRecipe('Corn-Chip Salad')">View Recipe</button>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Lunch Grid -->
+            <div class="Lunch" id="Lunch">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/ChkFillet.jpg" alt="Crispy Chicken Fillet">
+                    <h3>Crispy Chicken Fillet</h3>
+                    <p>Crispy, golden fried chicken fillets, tender and perfectly seasoned.</p>
+                    <button onclick="viewRecipe('Crispy Chicken Fillet')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/HoneyChicken.jpg" alt="HoneyChicken">
+                    <h3>Honey Chicken</h3>
+                    <p>Juicy chicken is enveloped in a luscious glaze of golden honey. </p>
+                    <button onclick="viewRecipe('HoneyChicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Aglio.jpg" alt="Aglio">
+                    <h3>Aglio E Olio</h3>
+                    <p>A comforting pasta dish with garlic, olive oil, and herbs.</p>
+                    <button onclick="viewRecipe('Aglio e Olio')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Corn-Chip-Salad.jpg" alt="Corn-Chip-Salad">
+                    <h3>Corn-Chip-Salad</h3>
+                    <p>A crunchy, flavorful salad with corn chips, beans, and cheese. </p>
+                    <button onclick="viewRecipe('Corn-Chip Salad')">View Recipe</button>
+                </div>
+            </div>
+
+            <br>
+
+            <!-- Lunch Grid -->
+            <div class="Lunch" id="Lunch">
+                <!-- Recipe Card 1 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/ChkFillet.jpg" alt="Crispy Chicken Fillet">
+                    <h3>Crispy Chicken Fillet</h3>
+                    <p>Crispy, golden fried chicken fillets, tender and perfectly seasoned.</p>
+                    <button onclick="viewRecipe('Crispy Chicken Fillet')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 2 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/HoneyChicken.jpg" alt="HoneyChicken">
+                    <h3>Honey Chicken</h3>
+                    <p>Juicy chicken is enveloped in a luscious glaze of golden honey. </p>
+                    <button onclick="viewRecipe('HoneyChicken')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 3 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Aglio.jpg" alt="Aglio">
+                    <h3>Aglio E Olio</h3>
+                    <p>A comforting pasta dish with garlic, olive oil, and herbs.</p>
+                    <button onclick="viewRecipe('Aglio e Olio')">View Recipe</button>
+                </div>
+                <!-- Recipe Card 4 -->
+                <div class="recipe-card">
+                    <img src="../assets/LCH/Corn-Chip-Salad.jpg" alt="Corn-Chip-Salad">
+                    <h3>Corn-Chip-Salad</h3>
+                    <p>A crunchy, flavorful salad with corn chips, beans, and cheese. </p>
+                    <button onclick="viewRecipe('Corn-Chip Salad')">View Recipe</button>
+                </div>
+            </div>
+
+    </main>
+
+     <!-- Footer -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img src="../assets/Images/logo.png" alt="MinuteMeals Logo" height="90">
+
+                <p class="footer-links">
+                    <a href="../index.html#home">Home</a>
+                    <a href="/pages/recipes.html">Recipes</a>
+                    <a href="../index.html">Blog</a>
+                    <a href="../pages/submit-form.html#recipeContainer">New Released</a>
+                    <a href="../pages/submit-form.html">Submit Recipes</a>
+                </p>
+  
+          <p class="footer-company-name">MinuteMeals © 2025</p>
+        </div>
+  
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>029 T.S. Cornelia St.</span> Wisconsin, California</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:minutemeals@gmail.com">minute.Meals@gmail.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>Members: </span>
+            Adhie Ahat, Cherry Lou, Saara Eliana, John Troy.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+    </footer>
+
+    <!-- Link to Main JS for common scripts -->
+    <script src="../javascript/script.js"></script>
+    <!-- Link to Recipes JS for page-specific scripts -->
+    <script src="../javascript/recipes.js"></script>
+</body>
+</html>

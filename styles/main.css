@@ -1,0 +1,646 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #FEFAE0;
+    --container-color: #E1D7B7;
+    --header-color: #1E3E62;
+    --secondary-color: #FD8B51;
+    --hover-color: #CB6040;
+    --button-color: #257180;
+    --font-family: 'Poppins';
+    --padding: 20px;
+}
+
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: var(--font-family); /* Updated to use variable */
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--header-color);
+    padding-top: var(--padding); /* Use variable */
+    position: relative;
+}
+
+/* Header Container */
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Logo Styling */
+.logo {
+    text-align: center;
+    color: #fff;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Sign Up Button */
+.signup-button {
+    position: absolute;
+    top: var(--padding);
+    right: 1%;
+    padding: 10px 20px;
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-button:hover {
+    background-color: #fff;
+    color: var(--button-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(143, 142, 142, 0.15);
+}
+
+/* Navigation Bar */
+nav {
+    padding: 0px 20px 15px 20px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Adds space between nav links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 10px 15px; /* Adds padding inside the link */
+    position: relative; /* Required for positioning the ::after element */
+    transition: color 0.3s; /* Smooth text color transition */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expands the underline to full width on hover */
+    height: 2.5px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* Optionally change text color */
+    background-color: transparent; /* Remove background-color */
+    border-radius: 0; /* Remove border-radius */
+}
+
+/* Example for active link styling */
+.nav-links a.active {
+    color: #FD8B51; /* Change the color to match your theme */
+    text-decoration: underline;
+}
+
+
+/* Main Content */
+main {
+    width: 100%;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 10px;
+    margin: 40px 0 40px 0;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--button-color);
+}
+
+#home p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.home-banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+
+/* ===========================
+   Blog Section Styling
+   =========================== */
+.Blog {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    padding: 15px;
+    background: linear-gradient(90deg, #ff6f61, #ffb84d);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+/* Post Grid */
+.post-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Post Card */
+.post-card {
+    background-color: #5c5b5b32;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.post-content {
+    padding: 20px;
+    flex: 2;
+}
+
+.post-category {
+    font-size: 0.9em;
+    color: #69b3a2;
+    font-weight: bold;
+}
+
+.post-card h3 {
+    margin: 5px 0;
+    color: #000;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #17191b;
+}
+
+.post-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #222324;
+    margin: 10px 0 10px 0;
+}
+
+.post-content .continue-reading {
+    color: #0672b0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-content .continue-reading:hover {
+    text-decoration: underline;
+}
+
+/* Post Thumbnail */
+.post-thumbnail {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* ===========================
+   Newsletter Section Styling
+   =========================== */
+.newsletter-section {
+    background-color: white;
+    padding: 60px 10px;
+    margin: 40px;
+    border-radius: 10px;
+    margin: 60px 0 60px 0;
+}
+
+.newsletter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.newsletter-content {
+    flex: 1 1 300px;
+    max-width: 500px;
+    margin-top: 80px;
+}
+
+.newsletter-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.newsletter-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.newsletter-form {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.subscribe-btn {
+    padding: 15px 25px;
+    border: none;
+    background-color: #ff6347;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #e5533d;
+}
+
+
+/* ===========================
+   Featured Articles Styling
+   =========================== */
+.featured-articles {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+.featured-articles h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.featured-recipes {
+    background-color: transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.featured-recipes:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.featured-recipes img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.featured-recipes h4 {
+    font-size: 1rem;
+    margin: 15px 10px 5px;
+    color: #ff6347;
+}
+
+.featured-recipes h4 a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.featured-recipes h4 a:hover {
+    text-decoration: underline;
+}
+
+
+/* Quick Tips Section */
+
+.Tips-section {
+    background-color: white;
+    padding: 60px 10px;
+    margin: 50px 40px;
+    border-radius: 10px;
+}
+
+#tips h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+}
+
+.tips-list {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li {
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid var(--button-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.tips-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* About Section */
+.about-section {
+    margin: 90px 50px;
+
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1 1 300px;
+    color: #555;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* General Styles for Footer */
+.footer-distributed {
+    background-color: var(--button-color);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 35px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer Left */
+.footer-distributed .footer-left {
+    width: 40%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Poppins', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: lightseagreen;
+}
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.footer-links:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signup-button {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .recipes-container,
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+}
